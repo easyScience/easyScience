@@ -13,45 +13,48 @@ Mermaid-based easyScience project diagrams.
 
 ```mermaid
 graph LR
-	easyScience -.- easyApps
-	easyScience -.- easyLibs 
 
-	subgraph easyLibs
-	end
-	subgraph easyApps
-	end
+easyScience -.- easyApps
+easyScience -.- easyLibs 
+
+subgraph easyLibs
+end
+subgraph easyApps
+end
 ```
 
 ### easyLibs
 
 ```mermaid
 graph LR
-	subgraph easyLibs
-		easyCore --> easySkeletonLib
 
-		easySkeletonLib -.-> easyExampleLib
-		easySkeletonLib --> easyDiffractionLib
-		easySkeletonLib --> easySpectroscopyLib
-	end
-	subgraph easyApps
-		easyExampleLib --> easyExampleApp
-		easyDiffractionLib --> easyDiffractionApp
-		easySpectroscopyLib --> easySpectroscopyApp
-	end
+subgraph easyLibs
+	easyCore --> easySkeletonLib
+
+	easySkeletonLib -.-> easyExampleLib
+	easySkeletonLib --> easyDiffractionLib
+	easySkeletonLib --> easySpectroscopyLib
+end
+subgraph easyApps
+	easyExampleLib --> easyExampleApp
+	easyDiffractionLib --> easyDiffractionApp
+	easySpectroscopyLib --> easySpectroscopyApp
+end
 ```
 
 ### easyApps
 
 ```mermaid
 graph LR
-	subgraph easyApps
-		easyBaseAppLogic --> easySkeletonApp
-		easyBaseAppGui --> easySkeletonApp
 
-		easySkeletonApp -.-> easyExampleApp
-		easySkeletonApp --> easyDiffractionApp
-		easySkeletonApp --> easySpectroscopyApp
-	end
+subgraph easyApps
+	easyBaseAppLogic --> easySkeletonApp
+	easyBaseAppGui --> easySkeletonApp
+
+	easySkeletonApp -.-> easyExampleApp
+	easySkeletonApp --> easyDiffractionApp
+	easySkeletonApp --> easySpectroscopyApp
+end
 
 subgraph easyLibs
 	easyExampleApp --- easyExampleLib
@@ -61,6 +64,31 @@ end
 ```
 
 ## Repo structure
+
+### easyScience
+
+```mermaid
+classDiagram
+
+easyExampleLib .. easyExampleApp
+easyDiffractionLib .. easyDiffractionApp
+easySpectroscopyLib .. easySpectroscopyApp
+
+
+easyCore .. easySkeletonLib
+easySkeletonLib <|.. easyExampleLib
+easySkeletonLib ..> easyDiffractionLib
+easySkeletonLib .. easySpectroscopyLib
+
+
+
+easyBaseAppLogic .. easySkeletonApp
+easyBaseAppGui .. easySkeletonApp
+easySkeletonApp .. easyExampleApp
+easySkeletonApp .. easyDiffractionApp
+easySkeletonApp .. easySpectroscopyApp
+```
+
 
 ### easyApps
 
