@@ -133,19 +133,19 @@ easyExampleLib
 -- Example1
 -- Example2
 ...
-import easyCore()
+import_easyCore()
 }
 
 class easyDiffractionLib {
 easyDiffractionLib
 ...
-import easyCore()
+import_easyCore()
 }
 
 class easySpectroscopyLib {
 easySpectroscopyLib
 ...
-import easyCore()
+import_easyCore()
 }
 
 %% easyApps
@@ -189,31 +189,31 @@ class easyExampleApp {
 easyExampleApp
 -- Example1
 -- Example2
-import easyExampleLib()
-import easyBaseAppLogic()
-import easyBaseAppGui()
-import Logic()
-import Gui()
+import_easyExampleLib()
+import_easyBaseAppLogic()
+import_easyBaseAppGui()
+import_Logic()
+import_Gui()
 }
 
 class easyDiffractionApp {
 easyDiffractionApp
 ...
-import easyDiffractionLib()
-import easyBaseAppLogic()
-import easyBaseAppGui()
-import Logic()
-import Gui()
+import_easyDiffractionLib()
+import_easyBaseAppLogic()
+import_easyBaseAppGui()
+import_Logic()
+import_Gui()
 }
 
 class easySpectroscopyApp {
 easySpectroscopyApp
 ...
-import easySpectroscopyLib()
-import easyBaseAppLogic()
-import easyBaseAppGui()
-import Logic()
-import Gui()
+import_easySpectroscopyLib()
+import_easyBaseAppLogic()
+import.easyBaseAppGui()
+import..Logic()
+import~~Gui()
 }
 ```
 
