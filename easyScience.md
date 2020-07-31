@@ -87,28 +87,6 @@ class easyBaseAppGui {
 └── pyproject.toml, docs, etc.
 }
 
-classDiagram
-
-class easyBaseAppLogic {
-├── easyBaseAppLogic
-│⠀  ├── Utils
-│⠀  ├── QtLogger.py
-│⠀  └── Translate.py
-└── pyproject.toml, docs, etc.
-}
-
-class easyBaseAppGui {
-├── easyBaseAppGui
-│⠀  ├── Animations
-│⠀  ├── Charts
-│⠀  ├── Components
-│⠀  ├── Element
-│⠀  ├── Globals
-│⠀  ├── Resources
-│⠀  └── Style
-└── pyproject.toml, docs, etc.
-}
-
 class easySkeletonApp {
 ├── easySkeletonApp
 │└── Logic
@@ -119,6 +97,19 @@ class easySkeletonApp {
 │     └── Logic
 │      └── Logic
 │       └── Logic
+│            ├── PyQmlProxy.py
+│   └── QtInterface.py
+│└── Gui
+│⠀ ├── Charts
+│⠀ ├── Components
+│⠀ ├── Element
+│⠀ ├── Globals
+│⠀ ├── Resources
+│⠀ └── Style
+└── pyproject.toml, docs, etc.
+Logic
+Gui
+main.py
 }
 ```
 
