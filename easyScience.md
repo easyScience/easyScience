@@ -17,10 +17,8 @@ graph LR
 	easyScience -.- easyLibs 
 
 	subgraph easyLibs
-		%%a[...]
 	end
 	subgraph easyApps
-		%%b[...]
 	end
 ```
 
@@ -54,6 +52,12 @@ graph LR
 		easySkeletonApp --> easyDiffractionApp
 		easySkeletonApp --> easySpectroscopyApp
 	end
+
+subgraph easyLibs
+	easyExampleApp --- easyExampleLib
+	easyDiffractionApp --- easyDiffractionLib
+	easySpectroscopyApp --- easySpectroscopyLib
+end
 ```
 
 ## Class diagrams
