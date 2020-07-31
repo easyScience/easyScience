@@ -119,19 +119,6 @@ class easySkeletonApp {
 │     └── Logic
 │      └── Logic
 │       └── Logic
-│            ├── PyQmlProxy.py
-│   └── QtInterface.py
-│└── Gui
-│⠀ ├── Charts
-│⠀ ├── Components
-│⠀ ├── Element
-│⠀ ├── Globals
-│⠀ ├── Resources
-│⠀ └── Style
-└── pyproject.toml, docs, etc.
-Logic
-Gui
-main.py
 }
 
 ```
