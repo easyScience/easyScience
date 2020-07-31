@@ -70,23 +70,20 @@ end
 ```mermaid
 classDiagram
 
-easyExampleLib .. easyExampleApp
-easyDiffractionLib .. easyDiffractionApp
-easySpectroscopyLib .. easySpectroscopyApp
+easyCore <-- easySkeletonLib
+easySkeletonLib .. easyExampleLib
+easySkeletonLib -- easyDiffractionLib
+easySkeletonLib -- easySpectroscopyLib
 
-
-easyCore .. easySkeletonLib
-easySkeletonLib <|.. easyExampleLib
-easySkeletonLib ..> easyDiffractionLib
-easySkeletonLib .. easySpectroscopyLib
-
-
-
-easyBaseAppLogic .. easySkeletonApp
-easyBaseAppGui .. easySkeletonApp
+easyBaseAppLogic <-- easySkeletonApp
+easyBaseAppGui <-- easySkeletonApp
 easySkeletonApp .. easyExampleApp
-easySkeletonApp .. easyDiffractionApp
-easySkeletonApp .. easySpectroscopyApp
+easySkeletonApp -- easyDiffractionApp
+easySkeletonApp -- easySpectroscopyApp
+
+easyExampleLib <-- easyExampleApp
+easyDiffractionLib <-- easyDiffractionApp
+easySpectroscopyLib <-- easySpectroscopyApp
 ```
 
 
