@@ -174,7 +174,7 @@ import_Gui()
 
 ## Class diagrams
 
-### easyCore.Objects.Base
+#### easyCore.Objects.Base
 
 ```mermaid
 classDiagram
