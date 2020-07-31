@@ -111,10 +111,17 @@ class easyBaseAppGui {
 
 class easySkeletonApp {
 ├── easySkeletonApp
-│	└── Logic
-│		├── PyQmlProxy.py
-│		└── QtInterface.py
-│	└── Gui
+│└── Logic
+│ └── Logic
+│  └── Logic
+│   └── Logic
+│    └── Logic
+│     └── Logic
+│      └── Logic
+│       └── Logic
+│            ├── PyQmlProxy.py
+│   └── QtInterface.py
+│└── Gui
 │⠀ ├── Charts
 │⠀ ├── Components
 │⠀ ├── Element
@@ -122,9 +129,9 @@ class easySkeletonApp {
 │⠀ ├── Resources
 │⠀ └── Style
 └── pyproject.toml, docs, etc.
-	Logic
-	Gui
-	main.py
+Logic
+Gui
+main.py
 }
 
 ```
