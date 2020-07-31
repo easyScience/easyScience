@@ -3,11 +3,11 @@
 Mermaid-based easyScience project diagrams.
 
 * About Mermaid: https://mermaid-js.github.io/mermaid
+* Flow charts: https://mermaid-js.github.io/mermaid/#/flowchart
+* Class diagrams: https://mermaid-js.github.io/mermaid/#/classDiagram
 * Live editor: https://mermaidjs.github.io/mermaid-live-editor
 
-## Flow charts
-
-Manual: https://mermaid-js.github.io/mermaid/#/flowchart
+## Project structure
 
 ### easyScience
 
@@ -60,9 +60,53 @@ subgraph easyLibs
 end
 ```
 
-## Class diagrams
+## Repo structure
 
-Manual: https://mermaid-js.github.io/mermaid/#/classDiagram
+### easyApps
+
+```mermaid
+classDiagram
+
+class easyBaseAppLogic {
+├── easyBaseAppLogic
+│⠀  ├── Utils
+│⠀  ├── QtLogger.py
+│⠀  └── Translate.py
+└── pyproject.toml, docs, etc.
+}
+
+class easyBaseAppGui {
+├── easyBaseAppGui
+│⠀  ├── Animations
+│⠀  ├── Charts
+│⠀  ├── Components
+│⠀  ├── Element
+│⠀  ├── Globals
+│⠀  ├── Resources
+│⠀  └── Style
+└── pyproject.toml, docs, etc.
+}
+
+class easySkeletonApp {
+├── easySkeletonApp
+│⠀  └── Logic
+│⠀     ├── PyQmlProxy.py
+│⠀  └── QtInterface.py
+│⠀  └── Gui
+│⠀ ├── Charts
+│⠀ ├── Components
+│⠀ ├── Element
+│⠀ ├── Globals
+│⠀ ├── Resources
+│⠀ └── Style
+└── pyproject.toml, docs, etc.
+	Logic
+	Gui
+	main.py
+}
+```
+
+## Class diagrams
 
 ```mermaid
 classDiagram
