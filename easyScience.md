@@ -211,35 +211,36 @@ easySpectroscopyApp
 ...
 import_easySpectroscopyLib()
 import_easyBaseAppLogic()
-import.easyBaseAppGui()
-import..Logic()
-import~~Gui()
+import_easyBaseAppGui()
+import_Logic()
+import_Gui()
 }
 ```
 
 ## Class diagrams
 
+### easyCore.Objects.Base.py
+
 ```mermaid
 classDiagram
 
-	Descriptor <|-- Parameter
-	Parameter <|-- Lattice
-	Parameter <|-- Atom
+Descriptor <|-- Parameter
+Parameter <|-- Lattice
+Parameter <|-- Atom
 
-	class Descriptor {
-	}
+class Descriptor {
+}
 
-	class Parameter {
-	}
+class Parameter {
+}
 
-	class Lattice {
-		+real a
-		+real b
-		+real c
-		+real volume()
-		fa:fa-ban qwe
-	}
+class Lattice {
+	+real a
+	+real b
+	+real c
+	+real volume()
+}
 
-	class Atom {
-	}
+class Atom {
+}
 ```
