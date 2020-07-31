@@ -17,10 +17,10 @@ graph LR
 	easyScience -.- easyLibs 
 
 	subgraph easyLibs
-		a[...]
+		%%a[...]
 	end
 	subgraph easyApps
-		b[...]
+		%%b[...]
 	end
 ```
 
