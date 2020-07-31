@@ -18,7 +18,7 @@ easyScience .. easyLibs
 easyScience .. easyApps
 ```
 
-### Repo structure
+### easyLibs
 
 ```mermaid
 classDiagram
@@ -27,19 +27,21 @@ easyCore --> easySkeletonLib
 easySkeletonLib ..> easyExampleLib
 easySkeletonLib --> easyDiffractionLib
 easySkeletonLib --> easySpectroscopyLib
+```
+
+### easyApps
+
+```mermaid
+classDiagram
 
 easyBaseAppLogic --> easySkeletonApp
 easyBaseAppGui --> easySkeletonApp
 easySkeletonApp ..> easyExampleApp
 easySkeletonApp --> easyDiffractionApp
 easySkeletonApp --> easySpectroscopyApp
-
-%%easyExampleLib --> easyExampleApp
-%%easyDiffractionLib --> easyDiffractionApp
-%%%easySpectroscopyLib --> easySpectroscopyApp
 ```
 
-### Repo structure (extended)
+### Repo structure
 
 ```mermaid
 classDiagram
