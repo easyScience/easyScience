@@ -2,37 +2,73 @@
 
 Mermaid-based easyScience project diagrams.
 
+* About Mermaid: https://mermaid-js.github.io/mermaid
+* Live editor: https://mermaidjs.github.io/mermaid-live-editor
+
 ## Flow charts
 
-```mermaid
-flowchart TD 
+Manual: https://mermaid-js.github.io/mermaid/#/flowchart
 
-	easyScience -.- easyLibs
-	easyScience -.- easyApps
+### easyScience
+
+```mermaid
+flowchart LR
+
+easyScience -.- easyApps
+easyScience -.- easyLibs 
 
 	subgraph easyLibs
-	
-	easyCore --> easySkeletonLib
+		a[...]
+	end
 
-	easySkeletonLib --> easyExampleLib
-	easySkeletonLib --> easyDiffractionLib
-	easySkeletonLib --> easySpectroscopyLib
+	subgraph easyApps
+		b[...]
+	end
+```
+
+### easyLibs
+
+```mermaid
+flowchart LR
+	subgraph easyLibs
+
+		easyCore --> easySkeletonLib
+
+		easySkeletonLib -.-> easyExampleLib
+		easySkeletonLib --> easyDiffractionLib
+		easySkeletonLib --> easySpectroscopyLib
 
 	end
 
 	subgraph easyApps
 
-	easyBaseAppLogic --> easySkeletonApp
-	easyBaseAppGui --> easySkeletonApp
+		easyExampleLib --> easyExampleApp
+		easyDiffractionLib --> easyDiffractionApp
+		easySpectroscopyLib --> easySpectroscopyApp
 
-	easySkeletonApp --> easyExampleApp
-	easySkeletonApp --> easyDiffractionApp
-	easySkeletonApp --> easySpectroscopyApp
+	end
+```
+
+### easyApps
+
+```mermaid
+flowchart LR
+
+	subgraph easyApps
+
+		easyBaseAppLogic --> easySkeletonApp
+		easyBaseAppGui --> easySkeletonApp
+
+		easySkeletonApp -.-> easyExampleApp
+		easySkeletonApp --> easyDiffractionApp
+		easySkeletonApp --> easySpectroscopyApp
 
 	end
 ```
 
 ## Class diagrams
+
+Manual: https://mermaid-js.github.io/mermaid/#/classDiagram
 
 ```mermaid
 classDiagram
@@ -58,8 +94,3 @@ classDiagram
 	class Atom {
 	}
 ```
-
-# Info
-
-* About Mermaid: https://mermaid-js.github.io/mermaid
-* Live editor: https://mermaidjs.github.io/mermaid-live-editor
