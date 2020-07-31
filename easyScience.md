@@ -1,6 +1,9 @@
 # Diagrams
 
+Mermaid-based easyScience project diagrams.
+
 ## Flow charts
+
 ```mermaid
 flowchart TD 
 
@@ -31,7 +34,6 @@ flowchart TD
 
 ## Class diagrams
 
-**Example 0**
 ```mermaid
 classDiagram
 
@@ -50,6 +52,7 @@ classDiagram
 		+real b
 		+real c
 		+real volume()
+		fa:fa-ban qwe
 	}
 
 	class Atom {
