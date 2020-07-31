@@ -65,7 +65,7 @@ end
 
 ## Repo structure
 
-### easyScience
+### easyScience (small)
 
 ```mermaid
 classDiagram
@@ -86,55 +86,134 @@ easySkeletonApp --> easySpectroscopyApp
 %%%easySpectroscopyLib --> easySpectroscopyApp
 ```
 
-
-### easyApps
+### easyScience (medium)
 
 ```mermaid
 classDiagram
 
+%% binding
+
+easyCore --> easySkeletonLib
+easySkeletonLib ..> easyExampleLib : Clone structure for every example
+easySkeletonLib --> easyDiffractionLib : Clone structure
+easySkeletonLib --> easySpectroscopyLib : Clone structure
+
+easyBaseAppLogic --> easySkeletonApp
+easyBaseAppGui --> easySkeletonApp
+easySkeletonApp ..> easyExampleApp : Clone structure for every example
+easySkeletonApp --> easyDiffractionApp : Clone structure
+easySkeletonApp --> easySpectroscopyApp : Clone structure
+
+%%easyExampleLib --> easyExampleApp
+%%easyDiffractionLib --> easyDiffractionApp
+%%%easySpectroscopyLib --> easySpectroscopyApp
+
+%% easyLibs
+
+class easyCore {
+easyCore
+-- Fitting
+-- Objects
+-- Utils
+pyproject.toml, docs, etc.
+}
+
+class easySkeletonLib {
+easySkeletonLib
+-- Calculators
+---- calculator1.py
+-- Interfaces
+---- interfaceTemplate.py
+---- interface1.py
+pyproject.toml, docs, etc.
+}
+
+class easyExampleLib {
+easyExampleLib
+-- Example1
+-- Example2
+...
+import easyCore()
+}
+
+class easyDiffractionLib {
+easyDiffractionLib
+...
+import easyCore()
+}
+
+class easySpectroscopyLib {
+easySpectroscopyLib
+...
+import easyCore()
+}
+
+%% easyApps
+
 class easyBaseAppLogic {
-├── easyBaseAppLogic
-│⠀  ├── Utils
-│⠀  ├── QtLogger.py
-│⠀  └── Translate.py
-└── pyproject.toml, docs, etc.
+easyBaseAppLogic
+-- Utils
+---- QtLogger.py
+---- Translate.py
+pyproject.toml, docs, etc.
 }
 
 class easyBaseAppGui {
-├── easyBaseAppGui
-│⠀  ├── Animations
-│⠀  ├── Charts
-│⠀  ├── Components
-│⠀  ├── Element
-│⠀  ├── Globals
-│⠀  ├── Resources
-│⠀  └── Style
-└── pyproject.toml, docs, etc.
+easyBaseAppGui
+-- Animations
+-- Charts
+-- Components
+-- Element
+-- Globals
+-- Resources
+-- Style
+pyproject.toml, docs, etc.
 }
 
 class easySkeletonApp {
-├── easySkeletonApp
-│└── Logic
-│ └── Logic
-│  └── Logic
-│   └── Logic
-│    └── Logic
-│     └── Logic
-│      └── Logic
-│       └── Logic
-│            ├── PyQmlProxy.py
-│   └── QtInterface.py
-│└── Gui
-│⠀ ├── Charts
-│⠀ ├── Components
-│⠀ ├── Element
-│⠀ ├── Globals
-│⠀ ├── Resources
-│⠀ └── Style
-└── pyproject.toml, docs, etc.
-Logic
-Gui
-main.py
+easySkeletonApp
+-- Logic
+---- PyQmlProxy.py
+---- QtInterface.py
+-- Gui
+---- Components
+---- Globals
+---- Pages
+---- Resources
+---- main.qml
+-- main.py
+pyproject.toml, docs, etc.
+}
+
+class easyExampleApp {
+easyExampleApp
+-- Example1
+-- Example2
+import easyExampleLib()
+import easyBaseAppLogic()
+import easyBaseAppGui()
+import Logic()
+import Gui()
+}
+
+class easyDiffractionApp {
+easyDiffractionApp
+...
+import easyDiffractionLib()
+import easyBaseAppLogic()
+import easyBaseAppGui()
+import Logic()
+import Gui()
+}
+
+class easySpectroscopyApp {
+easySpectroscopyApp
+...
+import easySpectroscopyLib()
+import easyBaseAppLogic()
+import easyBaseAppGui()
+import Logic()
+import Gui()
 }
 ```
 
