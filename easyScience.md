@@ -29,7 +29,7 @@ easyScience -.- easyLibs
 ### easyLibs
 
 ```mermaid
-flowchart LR
+graph LR
 	subgraph easyLibs
 
 		easyCore --> easySkeletonLib
@@ -52,7 +52,7 @@ flowchart LR
 ### easyApps
 
 ```mermaid
-flowchart LR
+graph LR
 
 	subgraph easyApps
 
