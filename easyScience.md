@@ -12,15 +12,13 @@ Manual: https://mermaid-js.github.io/mermaid/#/flowchart
 ### easyScience
 
 ```mermaid
-flowchart LR
-
-easyScience -.- easyApps
-easyScience -.- easyLibs 
+graph LR
+	easyScience -.- easyApps
+	easyScience -.- easyLibs 
 
 	subgraph easyLibs
 		a[...]
 	end
-
 	subgraph easyApps
 		b[...]
 	end
@@ -31,21 +29,16 @@ easyScience -.- easyLibs
 ```mermaid
 graph LR
 	subgraph easyLibs
-
 		easyCore --> easySkeletonLib
 
 		easySkeletonLib -.-> easyExampleLib
 		easySkeletonLib --> easyDiffractionLib
 		easySkeletonLib --> easySpectroscopyLib
-
 	end
-
 	subgraph easyApps
-
 		easyExampleLib --> easyExampleApp
 		easyDiffractionLib --> easyDiffractionApp
 		easySpectroscopyLib --> easySpectroscopyApp
-
 	end
 ```
 
@@ -53,16 +46,13 @@ graph LR
 
 ```mermaid
 graph LR
-
 	subgraph easyApps
-
 		easyBaseAppLogic --> easySkeletonApp
 		easyBaseAppGui --> easySkeletonApp
 
 		easySkeletonApp -.-> easyExampleApp
 		easySkeletonApp --> easyDiffractionApp
 		easySkeletonApp --> easySpectroscopyApp
-
 	end
 ```
 
