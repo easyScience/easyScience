@@ -81,9 +81,9 @@ easySkeletonApp ..> easyExampleApp
 easySkeletonApp --> easyDiffractionApp
 easySkeletonApp --> easySpectroscopyApp
 
-easyExampleLib --> easyExampleApp
-easyDiffractionLib --> easyDiffractionApp
-easySpectroscopyLib --> easySpectroscopyApp
+%%easyExampleLib --> easyExampleApp
+%%easyDiffractionLib --> easyDiffractionApp
+%%%easySpectroscopyLib --> easySpectroscopyApp
 ```
 
 
