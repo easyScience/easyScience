@@ -12,60 +12,13 @@ Mermaid-based easyScience project diagrams.
 ### easyScience
 
 ```mermaid
-graph LR
+classDiagram
 
-easyScience -.- easyApps
-easyScience -.- easyLibs 
-
-subgraph easyLibs
-end
-subgraph easyApps
-end
+easyScience .. easyLibs
+easyScience .. easyApps
 ```
 
-### easyLibs
-
-```mermaid
-graph LR
-
-subgraph easyLibs
-	easyCore --> easySkeletonLib
-
-	easySkeletonLib -.-> easyExampleLib
-	easySkeletonLib --> easyDiffractionLib
-	easySkeletonLib --> easySpectroscopyLib
-end
-subgraph easyApps
-	easyExampleLib --> easyExampleApp
-	easyDiffractionLib --> easyDiffractionApp
-	easySpectroscopyLib --> easySpectroscopyApp
-end
-```
-
-### easyApps
-
-```mermaid
-graph LR
-
-subgraph easyApps
-	easyBaseAppLogic --> easySkeletonApp
-	easyBaseAppGui --> easySkeletonApp
-
-	easySkeletonApp -.-> easyExampleApp
-	easySkeletonApp --> easyDiffractionApp
-	easySkeletonApp --> easySpectroscopyApp
-end
-
-subgraph easyLibs
-	easyExampleApp --- easyExampleLib
-	easyDiffractionApp --- easyDiffractionLib
-	easySpectroscopyApp --- easySpectroscopyLib
-end
-```
-
-## Repo structure
-
-### easyScience (small)
+### Repo structure
 
 ```mermaid
 classDiagram
@@ -86,7 +39,7 @@ easySkeletonApp --> easySpectroscopyApp
 %%%easySpectroscopyLib --> easySpectroscopyApp
 ```
 
-### easyScience (medium)
+### Repo structure (extended)
 
 ```mermaid
 classDiagram
@@ -219,10 +172,11 @@ import_Gui()
 
 ## Class diagrams
 
-### easyCore.Objects.Base.py
+### easyCore.Objects.Base
 
 ```mermaid
 classDiagram
+
 Descriptor <|-- Parameter
 Parameter <|-- Lattice
 Parameter <|-- Atom
