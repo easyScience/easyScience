@@ -120,7 +120,6 @@ class easySkeletonApp {
 │      └── Logic
 │       └── Logic
 }
-
 ```
 
 ## Class diagrams
