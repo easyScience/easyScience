@@ -2,11 +2,11 @@
 
 Mermaid-based easyScience project diagrams.
 
-* About Mermaid: https://mermaid-js.github.io/mermaid
-* Flow charts: https://mermaid-js.github.io/mermaid/#/flowchart
-* Class diagrams: https://mermaid-js.github.io/mermaid/#/classDiagram
-* Live editor: https://mermaidjs.github.io/mermaid-live-editor
-* Chrome extension: https://chrome.google.com/webstore/detail/mermaid-diagrams/phfcghedmopjadpojhmmaffjmfiakfil
+-   About Mermaid: <https://mermaid-js.github.io/mermaid>
+-   Flow charts: <https://mermaid-js.github.io/mermaid/#/flowchart>
+-   Class diagrams: <https://mermaid-js.github.io/mermaid/#/classDiagram>
+-   Live editor: <https://mermaidjs.github.io/mermaid-live-editor>
+-   Chrome extension: <https://chrome.google.com/webstore/detail/mermaid-diagrams/phfcghedmopjadpojhmmaffjmfiakfil>
 
 ## Project structure
 
@@ -172,6 +172,10 @@ import_Logic()
 import_Gui()
 }
 ```
+
+[Kroki-based](https://kroki.io/) diagram
+
+![](https://kroki.io/mermaid/svg/eNq1VE1r3DAQvetX6LLQQtaQHnsopJs0FALNdtNz0SqzrlpZciW5xJj-92osf8iyDbuQ3mZGM0-jN2_EJbP2VrDcsIKQzYYehXoWKicEmK132gDdbj9QdA6_QILT6kEcSeLTLAs5dy-sKCVg6D3dSa2AWmcq7ioPdNKGwh8wNYWQNoPpr7oVp5Nh3IkQnkGtFh5K4M5oy3VZL1e2pR-ZhZuyfNC54LP3-YM46b4SqymRn1KAoUspwJoFChahVgtjCpYr_ZiTWfW1Y-9dTjKI5eZ87maJ_JWOWplh3OdYQjgqkA5qawbhke2WfhLOoRq9-eX408NYNL85IS0p69JojGVOF_KKPmturyg4npG_MWyskyZVDsLtmOSVZE4bRPcBPgSus7LGlM_KgTkxDl2G6P0n8IQxByEvPmlLz-0xmkVocQzg9Z13HdnvSJZlRBSlNu57T9mbt1PYZHwBeho8ByYdbMfiNLoO1I3bj34y7skSNrO9HAfd8rp3PpqDGYh-MkzZnvpzeY52ukmWHO-7UaJgSEwrs90PZoLgdtq_S4EK3p2Ewtto3kt9ZG2L9CtYXZmgEHpwtd_tSxWK69qki41wPSHefKz3hXw0-qUemNi7QZ6dXMNz0sYn_SIUy3s9x817t2BCZb8LSXr7cimPb4k-lTUpR7IZhe_FE8VjaSye-DeP8SQtnK2txthq8q8lip4uzv9tL_3F5yu30GCyka_f4T8jU9R2)
 
 ## Class diagrams
 
