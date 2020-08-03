@@ -7,17 +7,17 @@
 !include C4_Component.puml
 
 'LAYOUT_TOP_DOWN
-LAYOUT_AS_SKETCH()
+'LAYOUT_AS_SKETCH()
 'LAYOUT_WITH_LEGEND()
 
 title easyScience diagram
 
 Container_Boundary(easyLibs, "easyLibs") {
-    Component(easyCore, "easyCore", "repo", "Allows users to sign in to the internet banking system")
-    Component(easySkeletonLib, "easySkeletonLib", "Spring Bean", "Provides functionality related to singing in, changing passwords, etc.")
-    Component(easyExampleLib, "easyExampleLib", "Spring Bean", "Provides functionality related to singing in, changing passwords, etc.")
-    Component(easyDiffractionLib, "easyDiffractionLib", "Spring Bean", "Provides functionality related to singing in, changing passwords, etc.")
-    Component(easySpectorscopyLib, "easySpectorscopyLib", "Spring Bean", "Provides functionality related to singing in, changing passwords, etc.")
+    Component(easyCore, "easyCore", "repo", "Allows users to ...")
+    Component(easySkeletonLib, "easySkeletonLib", "repo", "Provides functionality related to ...")
+    Component(easyExampleLib, "easyExampleLib", "repo", "Provides functionality related to ...")
+    Component(easyDiffractionLib, "easyDiffractionLib", "repo", "Provides functionality related to ...")
+    Component(easySpectorscopyLib, "easySpectorscopyLib", "repo", "Provides functionality related to ...")
 
     Rel(easyCore, easySkeletonLib, "Uses")
     Rel_Neighbor(easySkeletonLib, easyExampleLib, "Uses")
@@ -26,12 +26,12 @@ Container_Boundary(easyLibs, "easyLibs") {
 }
 
 Container_Boundary(easyApps, "easyApps") {
-    Component(easyBaseAppLogic, "easyBaseAppLogic", "repo", "Allows users to sign in to the internet banking system")
-    Component(easyBaseAppGui, "easyBaseAppGui", "repo", "Allows users to sign in to the internet banking system")
-    Component(easySkeletonApp, "easySkeletonApp", "Spring Bean", "Provides functionality related to singing in, changing passwords, etc.")
-    Component(easyExampleApp, "easyExampleApp", "Spring Bean", "Provides functionality related to singing in, changing passwords, etc.")
-    Component(easyDiffractionApp, "easyDiffractionApp", "Spring Bean", "Provides functionality related to singing in, changing passwords, etc.")
-    Component(easySpectorscopyApp, "easySpectorscopyApp", "Spring Bean", "Provides functionality related to singing in, changing passwords, etc.")
+    Component(easyBaseAppLogic, "easyBaseAppLogic", "repo", "Allows users to ...")
+    Component(easyBaseAppGui, "easyBaseAppGui", "repo", "Allows users to ...")
+    Component(easySkeletonApp, "easySkeletonApp", "repo", "Provides functionality related to ...")
+    Component(easyExampleApp, "easyExampleApp", "repo", "Provides functionality related to ...")
+    Component(easyDiffractionApp, "easyDiffractionApp", "repo", "Provides functionality related to ...")
+    Component(easySpectorscopyApp, "easySpectorscopyApp", "repo", "Provides functionality related to ...")
 
     Rel(easyBaseAppLogic, easySkeletonApp, "Uses")
     Rel(easyBaseAppGui, easySkeletonApp, "Uses")
