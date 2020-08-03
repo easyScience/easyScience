@@ -2,11 +2,12 @@
 
 Mermaid-based easyScience project diagrams.
 
--   About Mermaid: <https://mermaid-js.github.io/mermaid>
--   Flow charts: <https://mermaid-js.github.io/mermaid/#/flowchart>
--   Class diagrams: <https://mermaid-js.github.io/mermaid/#/classDiagram>
--   Live editor: <https://mermaidjs.github.io/mermaid-live-editor>
--   Chrome extension: <https://chrome.google.com/webstore/detail/mermaid-diagrams/phfcghedmopjadpojhmmaffjmfiakfil>
+- About Mermaid: https://mermaid-js.github.io/mermaid
+- Flow charts: https://mermaid-js.github.io/mermaid/#/flowchart
+- Class diagrams: https://mermaid-js.github.io/mermaid/#/classDiagram
+- Live editor: https://mermaidjs.github.io/mermaid-live-editor
+- Chrome extension: https://chrome.google.com/webstore/detail/mermaid-diagrams/phfcghedmopjadpojhmmaffjmfiakfil
+- Atom package: https://atom.io/packages/atom-mermaid
 
 ## Project structure
 
