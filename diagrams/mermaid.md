@@ -19,6 +19,10 @@ easyScience .. easyLibs
 easyScience .. easyApps
 ```
 
+[Kroki-based](https://kroki.io/) diagram
+
+![](https://kroki.io/mermaid/svg/eNpLzkksLnbJTEwvSszl4kpNLK4MTs5MzUtOVdDTUwBxfTKTirGJOxYUFAMAnpAVfA==)
+
 ### easyLibs
 
 ```mermaid
@@ -29,6 +33,10 @@ easySkeletonLib ..> easyExampleLib
 easySkeletonLib --> easyDiffractionLib
 easySkeletonLib --> easySpectroscopyLib
 ```
+
+[Kroki-based](https://kroki.io/) diagram
+
+![](https://kroki.io/mermaid/svg/eNpLzkksLnbJTEwvSszl4kpNLK50zi9KVdDVtVMAcYKzU3NSS_LzfDKTuND4Cnp6EDWuFYm5BTmp2JTAjHHJTEsrSkwuycRuEty2gtTkkqL84uT8gkqgOAAZtjhx)
 
 ### easyApps
 
@@ -41,6 +49,10 @@ easySkeletonApp ..> easyExampleApp
 easySkeletonApp --> easyDiffractionApp
 easySkeletonApp --> easySpectroscopyApp
 ```
+
+[Kroki-based](https://kroki.io/) diagram
+
+![](https://kroki.io/mermaid/svg/eNpLzkksLnbJTEwvSszl4kpNLK50SixOdSwo8MlPz0xW0NW1UwAJBmen5qSW5OcBJZAVuZdm4lSCxFfQ04Ooca1IzC3IScWmBGaMS2ZaWlFickkmdpPgthWkJpcU5Rcn5xdUgtQBACpXSC8=)
 
 ### Repo structure
 
@@ -195,3 +207,7 @@ class Lattice {
 	+real volume()
 }
 ```
+
+[Kroki-based](https://kroki.io/) diagram
+
+![](https://kroki.io/mermaid/svg/eNpLzkksLnbJTEwvSszl4nJJLU4uyiwoyS9SsKnR1VUISAQKp5akFnHBWRAJn8SSkszkVHRhx5J8oCnJIDNhShSquTi1i1ITcxQSYYwkGCMZxijLzynNTdXQ5KrlAgDviC6W)
