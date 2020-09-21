@@ -20,7 +20,7 @@ easyScience .. easyLibs
 easyScience .. easyApps
 ```
 
-[Kroki-based](https://kroki.io/) diagram
+[Kroki-based](https://kroki.io/) image
 
 ![](https://kroki.io/mermaid/svg/eNpLzkksLnbJTEwvSszl4kpNLK4MTs5MzUtOVdDTUwBxfTKTirGJOxYUFAMAnpAVfA==)
 
@@ -29,31 +29,29 @@ easyScience .. easyApps
 ```mermaid
 classDiagram
 
-easyCore --> easySkeletonLib
-easySkeletonLib ..> easyExampleLib
-easySkeletonLib --> easyDiffractionLib
-easySkeletonLib --> easySpectroscopyLib
+easyCore --> easyExampleLib
+easyExampleLib ..> easyDiffractionLib
+easyExampleLib ..> easySpectroscopyLib
 ```
 
-[Kroki-based](https://kroki.io/) diagram
+[Kroki-based](https://kroki.io/) image
 
-![](https://kroki.io/mermaid/svg/eNpLzkksLnbJTEwvSszl4kpNLK50zi9KVdDVtVMAcYKzU3NSS_LzfDKTuND4Cnp6EDWuFYm5BTmp2JTAjHHJTEsrSkwuycRuEty2gtTkkqL84uT8gkqgOAAZtjhx)
+![](https://kroki.io/mermaid/svg/eNpLzkksLnbJTEwvSszl4kpNLK50zi9KVdDVtVMAcVwrEnMLclJ9MpO4ULkKenoQFS6ZaWlFicklmfl5eFQFF6QmlxTlFyfnF1QCxQG7ViqD)
 
 ### easyApps
 
 ```mermaid
 classDiagram
 
-easyBaseAppLogic --> easySkeletonApp
-easyBaseAppGui --> easySkeletonApp
-easySkeletonApp ..> easyExampleApp
-easySkeletonApp --> easyDiffractionApp
-easySkeletonApp --> easySpectroscopyApp
+easyBaseAppLogic --> easyExampleApp
+easyBaseAppGui --> easyExampleApp
+easyExampleApp ..> easyDiffractionApp
+easyExampleApp ..> easySpectroscopyApp
 ```
 
-[Kroki-based](https://kroki.io/) diagram
+[Kroki-based](https://kroki.io/) image
 
-![](https://kroki.io/mermaid/svg/eNpLzkksLnbJTEwvSszl4kpNLK50SixOdSwo8MlPz0xW0NW1UwAJBmen5qSW5OcBJZAVuZdm4lSCxFfQ04Ooca1IzC3IScWmBGaMS2ZaWlFickkmdpPgthWkJpcU5Rcn5xdUgtQBACpXSC8=)
+![](https://kroki.io/mermaid/svg/eNpLzkksLnbJTEwvSszl4kpNLK50SixOdSwo8MlPz0xW0NW1UwAJulYk5hbkgMSR1biXZuJSgeAq6OlBVLhkpqUVJSaXZObn4VEVXJCaXFKUX5ycX1AJFAcA6fc5qg==)
 
 ### Repo structure
 
@@ -62,46 +60,47 @@ classDiagram
 
 %% binding
 
-easyCore --> easySkeletonLib
-easySkeletonLib ..> easyExampleLib : Clone structure for every example
-easySkeletonLib --> easyDiffractionLib : Clone structure
-easySkeletonLib --> easySpectroscopyLib : Clone structure
+easyCore --> easyExampleLib
+easyExampleLib ..> easyDiffractionLib : Clone structure
+easyExampleLib ..> easySpectroscopyLib : Clone structure
 
-easyBaseAppLogic --> easySkeletonApp
-easyBaseAppGui --> easySkeletonApp
-easySkeletonApp ..> easyExampleApp : Clone structure for every example
-easySkeletonApp --> easyDiffractionApp : Clone structure
-easySkeletonApp --> easySpectroscopyApp : Clone structure
+easyBaseAppLogic --> easyExampleApp
+easyBaseAppGui --> easyExampleApp
+easyExampleApp ..> easyDiffractionApp : Clone structure
+easyExampleApp ..> easySpectroscopyApp : Clone structure
 
 %%easyExampleLib --> easyExampleApp
 %%easyDiffractionLib --> easyDiffractionApp
-%%%easySpectroscopyLib --> easySpectroscopyApp
+%%easySpectroscopyLib --> easySpectroscopyApp
 
 %% easyLibs
 
 class easyCore {
 easyCore
+-- Elements
+---- Cell.py
 -- Fitting
+----- bumps.py
+----- lmfit.py
+----- fitting_template.py
+----- Fitting.py
 -- Objects
 -- Utils
 pyproject.toml, docs, etc.
 }
 
-class easySkeletonLib {
+class easyExampleLib {
 easySkeletonLib
 -- Calculators
 ---- calculator1.py
+---- calculator2.py
 -- Interfaces
----- interfaceTemplate.py
 ---- interface1.py
+---- interface2.py
+---- interfaceTemplate.py
+interface.py
+model.py
 pyproject.toml, docs, etc.
-}
-
-class easyExampleLib {
-easyExampleLib
--- Example1
--- Example2
-...
 import_easyCore()
 }
 
@@ -139,11 +138,10 @@ easyBaseAppGui
 pyproject.toml, docs, etc.
 }
 
-class easySkeletonApp {
-easySkeletonApp
+class easyExampleApp {
+easyExampleApp
 -- Logic
 ---- PyQmlProxy.py
----- QtInterface.py
 -- Gui
 ---- Components
 ---- Globals
@@ -152,17 +150,9 @@ easySkeletonApp
 ---- main.qml
 -- main.py
 pyproject.toml, docs, etc.
-}
-
-class easyExampleApp {
-easyExampleApp
--- Example1
--- Example2
 import_easyExampleLib()
 import_easyBaseAppLogic()
 import_easyBaseAppGui()
-import_Logic()
-import_Gui()
 }
 
 class easyDiffractionApp {
@@ -171,8 +161,6 @@ easyDiffractionApp
 import_easyDiffractionLib()
 import_easyBaseAppLogic()
 import_easyBaseAppGui()
-import_Logic()
-import_Gui()
 }
 
 class easySpectroscopyApp {
@@ -181,14 +169,12 @@ easySpectroscopyApp
 import_easySpectroscopyLib()
 import_easyBaseAppLogic()
 import_easyBaseAppGui()
-import_Logic()
-import_Gui()
 }
 ```
 
-[Kroki-based](https://kroki.io/) diagram
+[Kroki-based](https://kroki.io/) image
 
-![](https://kroki.io/mermaid/svg/eNq1VE1r3DAQvetX6LLQQtaQHnsopJs0FALNdtNz0SqzrlpZciW5xJj-92osf8iyDbuQ3mZGM0-jN2_EJbP2VrDcsIKQzYYehXoWKicEmK132gDdbj9QdA6_QILT6kEcSeLTLAs5dy-sKCVg6D3dSa2AWmcq7ioPdNKGwh8wNYWQNoPpr7oVp5Nh3IkQnkGtFh5K4M5oy3VZL1e2pR-ZhZuyfNC54LP3-YM46b4SqymRn1KAoUspwJoFChahVgtjCpYr_ZiTWfW1Y-9dTjKI5eZ87maJ_JWOWplh3OdYQjgqkA5qawbhke2WfhLOoRq9-eX408NYNL85IS0p69JojGVOF_KKPmturyg4npG_MWyskyZVDsLtmOSVZE4bRPcBPgSus7LGlM_KgTkxDl2G6P0n8IQxByEvPmlLz-0xmkVocQzg9Z13HdnvSJZlRBSlNu57T9mbt1PYZHwBeho8ByYdbMfiNLoO1I3bj34y7skSNrO9HAfd8rp3PpqDGYh-MkzZnvpzeY52ukmWHO-7UaJgSEwrs90PZoLgdtq_S4EK3p2Ewtto3kt9ZG2L9CtYXZmgEHpwtd_tSxWK69qki41wPSHefKz3hXw0-qUemNi7QZ6dXMNz0sYn_SIUy3s9x817t2BCZb8LSXr7cimPb4k-lTUpR7IZhe_FE8VjaSye-DeP8SQtnK2txthq8q8lip4uzv9tL_3F5yu30GCyka_f4T8jU9R2)
+![](https://kroki.io/mermaid/svg/eNqlVE1v3CAQvfMruERqpdhSc-yhUup8qFKkJt30HLHs2CXlq4ClWKv-94KNbcx6N2l7Yx4z8ObNA8qJtVeMNIYIhM7O8JbJHZMNQkBsVykDuCg-4RBcvxChOdyxLVqGuCyHjCtW14ZQx5QM8EdccSUBW2da6loDx-o2GqgzylKlu_XCvvIzsXCp9Z1qGM1ZeTzNuW3ZsYw5XOMd4JO807qU93qhVzTreYXVkJOJN-YtucXcXLAxOSPUDzTgPsciRMOs8TTX_TRiVBT4moMA6axf-6gCzkvdhY0b5lwwRNFvbFuh7bATQi5q5uawHnKfHPjeiIN5J54Sz_y6ffZEw134u2PcIt1powJWOiX4Od4pas8xOFqi3ynxRMiB_uYncHC9ZOG0inDa-puViY3QCfgwkkmwi8jni3RgakIhVrExnosm6OIQekzancAQCLWDXscT_TGhlXFP4yzevV92nNli6HoJorJ89ZjcMVG9JXr8oOgj76mFjxYvcn_wSOf59no9OI82YCYBHw2RdhTurRZIXvg-e_LhvkvJBAnC9O6qfhAz-KxSvi8ZHT66PSxvudqSniL-Bla1ZnAB3riOw98aM_wC--y7CIeNcvjlffcg-L1RL10030A8p7hgFspIM7ozpelDQZgsfwmOxvWb_Ta_Jj_lBE9nuLrjKZ_w6SxC9nll9lq6-P8p5N_xocdXSGRP4N9Y_AFZc35M)
 
 ## Class diagrams
 
@@ -209,6 +195,6 @@ class Lattice {
 }
 ```
 
-[Kroki-based](https://kroki.io/) diagram
+[Kroki-based](https://kroki.io/) image
 
 ![](https://kroki.io/mermaid/svg/eNpLzkksLnbJTEwvSszl4nJJLU4uyiwoyS9SsKnR1VUISAQKp5akFnHBWRAJn8SSkszkVHRhx5J8oCnJIDNhShSquTi1i1ITcxQSYYwkGCMZxijLzynNTdXQ5KrlAgDviC6W)
